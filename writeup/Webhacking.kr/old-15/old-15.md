@@ -1,14 +1,10 @@
----
-typora-root-url: old-15\img
----
-
 # [WriteUp]Webhacking.kr - old-15
 
 :black_nib:ChyKor12(sjjo0225@gmail.com)
 
 ---
 
-![Access_Denied](/Access_Denied.png)
+![Access_Denied](https://user-images.githubusercontent.com/57470479/72200225-26d75980-348a-11ea-8007-036a56cd9c43.png)
 
 챌린지에 들어가면 위와 같이 Access_Denied라는 창이 뜨면서 바로 홈 화면으로 돌아간다. 도메인 앞에 `view-source:`를 붙여서 해당 페이지의 소스 코드를 보자.
 
