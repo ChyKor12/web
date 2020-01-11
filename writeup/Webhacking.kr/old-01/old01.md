@@ -1,7 +1,3 @@
----
-typora-root-url: img
----
-
 # [WriteUp]Webhacking.kr - old01
 
 :black_nib:ChyKor12(sjjo0225@gmail.com)
@@ -44,10 +40,10 @@ typora-root-url: img
 
 `SetCookie("user_lv","1",time()+86400*30,"/challenge/web-01/");`는, user_lv라는 이름의 쿠키를 생성하는데 1이란 값을 가지고 현재 시간으로부터 30일 뒤(86400sec = 1day)에 만료되며, `"/challenge/web-01/"`이라는 경로에 존재하게 된다. 생성된 쿠키에 접근할 때는 `$_COOKIE["name"]`으로 접근할 수 있다. 아래쪽의 php문을 보면, user_lv라는 이름을 가진 쿠키가 6 이상이면 1로 바꾸고, 5 초과이면 `solve(1);`를 실행한다. 즉 쿠키의 값이 5 초과 6 미만이면 문제가 풀릴 것이다. 다시 문제 페이지(`https://webhacking.kr/challenge/web-01/`)로 돌아가서, 크롬의 관리자 도구(F12) - Application - Cookies - https://webhacking.kr에서 user_lv의 값을 5.5로 바꿔 보자.
 
-![change cookie](/change cookie.png)
+![change cookie](https://user-images.githubusercontent.com/57470479/72200420-aa924580-348c-11ea-8cf7-fd6e1e828ef3.png)
 
 새로고침.
 
-![clear](/clear.png)
+![clear](https://user-images.githubusercontent.com/57470479/72200419-aa924580-348c-11ea-8a56-a2680e5d21ed.png)
 
 level : 5.5가 뜨면서 문제가 풀린다.
